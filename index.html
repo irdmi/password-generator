@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Secure Password Generator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Client-side cryptographically secure password generator" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';">
+</head>
+<body>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+  
+  <main class="card">
+    <h1>Password Generator</h1>
+    
+    <label class="control">
+      <span>Length</span>
+      <input id="length" type="number" min="4" max="1024" value="16" />
+    </label>
+
+    <label class="control"><span>Lowercase (a–z)</span><input id="lower" type="checkbox" checked /></label>
+    <label class="control"><span>Uppercase (A–Z)</span><input id="upper" type="checkbox" checked /></label>
+    <label class="control"><span>Digits (0–9)</span><input id="digits" type="checkbox" checked /></label>
+    <label class="control"><span>Symbols (!@#…)</span><input id="symbols" type="checkbox" checked /></label>
+    <label class="control"><span>Exclude ambiguous (i/l/1/O/0)</span><input id="safe" type="checkbox" /></label>
+
+    <div class="actions">
+      <button id="generate">Generate</button>
+      <button id="copy">Copy</button>
+    </div>
+
+    <p class="small">Generated password:</p>
+    <pre id="result" role="status" aria-live="polite" tabindex="0">—</pre>
+  </main>
+
+  <script src="js/password-utils.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
