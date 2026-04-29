@@ -21,4 +21,4 @@ Format: `#<length>-<sets>[,<mode>]`
 - ✅ **100% Client-Side:** Generation happens entirely in your browser. Zero network requests, zero analytics, zero tracking.
 - ✅ **Cryptographically Strong:** Uses `crypto.getRandomValues()` with rejection sampling to eliminate modulo bias.
 - ✅ **Zero Persistence:** Passwords are never stored, cached, or transmitted. Clearing the tab erases everything.
-- ✅ **Offline-Ready:** Works without an internet connection. Open-source under the MIT license
+- ✅ **Offline-Ready:** Works without an internet connection. Open-source.
